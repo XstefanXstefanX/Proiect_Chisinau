@@ -8,6 +8,26 @@
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
   </head>
   <body>
+    <script>
+      window.onload = (e) => {
+        const blocky = document.getElementById("blocky");
+        window.addEventListener("scroll", () => {
+          const pixelsScrolled = window.scrollY;
+          document.body.onpointermove = (event) => {
+            const { clientX, clientY } = event;
+
+            blocky.animate(
+              {
+                left: `${clientX}px`,
+                top: `${clientY + pixelsScrolled}px`,
+              },
+              { duration: 1000, fill: "forwards" }
+            );
+          };
+        });
+      };
+    </script>
+    <div id="blocky"></div>
     <!-- Navigarea pe Site -->
     <div class="nav-bar-container">
       <h1>Chișinău</h1>

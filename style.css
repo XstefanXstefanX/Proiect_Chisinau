@@ -206,3 +206,22 @@ body {
   color: var(--accent);
   text-decoration: underline;
 }
+#blocky {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  z-index: -1;
+  background: linear-gradient(to right, var(--secondary), var(--accent));
+  transform: translate(-50%, -50%);
+  animation: rotate 5s infinite linear;
+  filter: blur(100px);
+}
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
