@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,37 +8,47 @@
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
   </head>
   <body>
+    <!-- Navigarea pe Site -->
     <div class="nav-bar-container">
       <h1>Chișinău</h1>
       <nav class="nav-bar">
         <ul>
-          <li class="nav-link"><a href="#acasa">Acasă</a></li>
+          <li class="nav-link"><a href="index.html">Acasă</a></li>
           <li class="nav-link">
             <a href="#despre_chisinau">Despre Chișinău</a>
           </li>
           <li class="nav-link">
-            <a href="#atractii_turistice">Atracții Turistice</a>
+            <a href="atractions.html" style="color: var(--accent)"
+              >Atracții Turistice</a
+            >
           </li>
           <li class="nav-link">
-            <a href="#evenimente_si_divertisment">Evenimente & Divertisment</a>
+            <a href="https://afisha.md/" style="color: var(--accent)"
+              >Evenimente & Divertisment</a
+            >
           </li>
           <li class="nav-link"><a href="#galerie">Galerie</a></li>
         </ul>
       </nav>
     </div>
+    <!-- Welcome-ul la pagină -->
     <section class="acasa" id="acasa">
       <div class="chisinau-img"></div>
-      <p class="descriere">
-        __Chișinău este capitala, cel mai mare oraș și centrul administrativ,
-        teritorial, economic, științific și cultural al Republicii Moldova.
-        Orașul este așezat la o margine a pantei de sud-est a Podișului Central
-        al Moldovei, în zona de silvostepă, fiind străbătut de râul Bâc, un
-        afluent de dreapta al Nistrului__
-      </p>
+      <div class="pisicaPeText">
+        <img src="image.png" alt="imagini-pisica" />
+        <p class="descriere">
+          __Chișinău este capitala, cel mai mare oraș și centrul administrativ,
+          teritorial, economic, științific și cultural al Republicii Moldova.
+          Orașul este așezat la o margine a pantei de sud-est a Podișului
+          Central al Moldovei, în zona de silvostepă, fiind străbătut de râul
+          Bâc, un afluent de dreapta al Nistrului__
+        </p>
+      </div>
     </section>
     <hr />
     <br />
     <hr />
+    <!-- Informația despre Chișinău -->
     <section class="despre_chisinau" id="despre_chisinau">
       <div class="etimologie">
         <h1>_Etimologie_</h1>
@@ -82,20 +92,7 @@
           aproximativ 5.000 de locuitori__
         </p>
       </div>
-      <div
-        class="image"
-        style="grid-column: 2/3; justify-self: center; align-self: center"
-      >
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/5/53/Actul_de_prim%C4%83_atestare_a_Chi%C8%99in%C4%83ului.jpg"
-          alt="pact-image"
-        />
-        <h3 style="align-self: center">
-          Hrisovul din 1436 care atestă pentru prima dată Chișinăul
-        </h3>
-      </div>
-
-      <div style="grid-row: 2/3" class="orasul tarist">
+      <div class="orasul tarist">
         <h1>_Orașul țarist_</h1>
         <p>
           __Dezvoltarea târgului ca oraș începe odată cu stăpânirea rusească
@@ -114,31 +111,19 @@
           decât 14% din populația orașului__
         </p>
       </div>
-      <div style="justify-self: center; align-self: center" class="image">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Kishinev_1887.jpg/800px-Kishinev_1887.jpg"
-          alt="harta-img"
-        />
-        <h3 style="align-self: center">
-          Harta reședinței de gubernie, la 1887
-        </h3>
-      </div>
-      <div class="image" style="justify-self: center; align-self: center">
+      <!-- Imaginile despre Chișinău -->
+      <div
+        class="image"
+        style="color: var(--text); text-align: center; align-self: center"
+      >
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Chi%C8%99in%C4%83u_1889_1.jpg"
           alt="panorama-chisinau-img"
         />
-        <h3 style="align-self: center">
-          Panorama orașului la 1889, centrul istoric din Chișinău
-        </h3>
+        <h3>Panorama orașului la 1889, centrul istoric din Chișinău</h3>
       </div>
     </section>
     <section class="atractii_turistice" id="atractii_turistice"></section>
-    <section
-      class="evenimente_si_divertisment"
-      id="evenimente_si_divertisment"
-    ></section>
-
     <hr />
     <br />
     <hr />
