@@ -6,6 +6,256 @@
     <link rel="stylesheet" href="style.css" />
     <title>Chișinău - localitatea noastră de baștină</title>
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      :root {
+        --text: #0f7173;
+        --background: #f1ecce;
+        --primary: #420c14;
+        --secondary: #51ceca;
+        --accent: #f05d5e;
+        --ff: "Poppins", sans-serif;
+      }
+      a {
+        text-decoration: none;
+        color: var(--accent);
+      }
+      hr {
+        transform: translate(-1rem);
+        height: 10px;
+        border: none;
+        background-color: var(--primary);
+        width: calc(100% + 2rem);
+      }
+      * {
+        scroll-behavior: smooth;
+        margin: 0;
+        padding: none;
+        font-family: var(--ff);
+        box-sizing: border-box;
+      }
+      body {
+        overflow-x: hidden;
+        background: var(--background);
+        padding: 0 1rem;
+      }
+
+      .nav-bar-container {
+        box-shadow: 0px 0px 20px var(--text);
+        transform: translateX(-1rem);
+        z-index: 999;
+        position: fixed;
+        top: 0;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        border-bottom: 2px double var(--primary);
+        background: var(--background);
+        > h1 {
+          align-self: center;
+          font-size: 4rem;
+          color: var(--text);
+        }
+      }
+      .nav-bar {
+        width: calc(100% + 2rem);
+        display: flex;
+        font-weight: 900;
+        font-size: 1.05rem;
+        color: var(--text);
+        > ul {
+          transform: translate(-1rem);
+          width: 100%;
+          display: flex;
+          justify-content: space-evenly;
+          list-style: none;
+          padding: 1rem;
+        }
+      }
+      .acasa {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .chisinau-img {
+        margin-top: 150px;
+        background-image: url(https://s.inyourpocket.com/gallery/chisinau/2020/02/shutterstock-1226633425.jpg);
+        min-height: 600px;
+        background-attachment: fixed;
+        background-size: 150%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .pisicaPeText {
+        transform: translate(20%, -80%);
+        color: white;
+        width: 50%;
+        font-size: 1.5rem;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        > img {
+          z-index: 99;
+          width: 50%;
+          transform: translate(10%, 20%);
+        }
+        .descriere {
+          padding: 3rem;
+          border-radius: 10px;
+          background: var(--accent);
+        }
+      }
+      .despre_chisinau {
+        text-align: justify;
+        width: calc(100% + 2rem);
+        transform: translate(-1rem);
+        padding: calc(100% / 10) calc(100% / 5);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4rem;
+        > div {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          > h1 {
+            align-self: center;
+            font-size: 2.5rem;
+            color: var(--text);
+          }
+        }
+      }
+      .galerie-container {
+        background: var(--primary);
+        width: calc(100% + 2rem);
+        transform: translate(-1rem);
+      }
+      .galerie {
+        gap: 1rem;
+        padding: calc(100% / 10);
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+      .galerie-imagine {
+        position: relative;
+        > img {
+          min-height: 100%;
+          object-fit: cover;
+          max-width: 100%;
+          border-radius: 10px;
+        }
+      }
+      .galerie-imagine:hover {
+        transform: scale(1.2);
+        transition: all 0.3s ease;
+        z-index: 10;
+      }
+      .galerie-imagine:hover::before {
+        content: "";
+        font-size: 150%;
+        text-align: center;
+        border-radius: 10px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        color: black;
+        font-weight: bold;
+      }
+      .galerie-imagine:nth-child(1):hover::before {
+        content: "Guvernul Republicii Moldova";
+      }
+      .galerie-imagine:nth-child(2):hover::before {
+        content: "Catedrala Nașterea Domnului";
+      }
+      .galerie-imagine:nth-child(3):hover::before {
+        content: "Vinuri";
+      }
+      .galerie-imagine:nth-child(4):hover::before {
+        content: "Parcul Valea Morilor";
+      }
+      .galerie-imagine:nth-child(5):hover::before {
+        content: "Porțile Orașului";
+      }
+      .galerie-imagine:nth-child(6):hover::before {
+        content: "Catedrala Nașterea Domnului";
+      }
+      .galerie-imagine:nth-child(7):hover::before {
+        content: "Clădire frumoasă";
+      }
+      .galerie-imagine:nth-child(8):hover::before {
+        content: "Primărie";
+      }
+      .galerie-imagine:nth-child(9):hover::before {
+        content: "Ștefan cel Mare monument";
+      }
+      .atractions {
+        border: 1px;
+        width: calc(100%-2rem);
+        transform: translate(-1rem);
+        padding: 0 calc(100% / 10);
+        top: 250px;
+        position: absolute;
+      }
+      .atractions .locuri_de_vizitat {
+        list-style: none;
+        width: 100%;
+        color: var(--text);
+        display: grid;
+        gap: 5rem;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+      }
+      .atractions .locuri_de_vizitat > li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        width: 100%;
+        height: 100%;
+      }
+      .atractions .locuri_de_vizitat > li > h1 {
+        color: var(--accent);
+        text-decoration: underline;
+      }
+      .video {
+        width: 100%;
+      }
+      #blocky {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        z-index: -1;
+        background: linear-gradient(to right, var(--secondary), var(--accent));
+        transform: translate(-50%, -50%);
+        animation: rotate 5s infinite linear;
+        filter: blur(100px);
+      }
+      @keyframes rotate {
+        0% {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+      .table {
+      }
+      .date-generale {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
   </head>
   <body>
     <script>
@@ -15,7 +265,6 @@
           const pixelsScrolled = window.scrollY;
           document.body.onpointermove = (event) => {
             const { clientX, clientY } = event;
-
             blocky.animate(
               {
                 left: `${clientX}px`,
@@ -47,6 +296,7 @@
               >Evenimente & Divertisment</a
             >
           </li>
+          <li class="nav-link"><a href="data.html">Date Generale</a></li>
           <li class="nav-link"><a href="#galerie">Galerie</a></li>
         </ul>
       </nav>
@@ -136,11 +386,15 @@
         class="image"
         style="color: var(--text); text-align: center; align-self: center"
       >
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Chi%C8%99in%C4%83u_1889_1.jpg"
-          alt="panorama-chisinau-img"
-        />
-        <h3>Panorama orașului la 1889, centrul istoric din Chișinău</h3>
+        <a href="https://ro.wikipedia.org/wiki/Chișinău">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Chi%C8%99in%C4%83u_1889_1.jpg"
+            alt="panorama-chisinau-img"
+          />
+        </a>
+        <a href="https://ro.wikipedia.org/wiki/Chișinău">
+          <h3>Panorama orașului la 1889, centrul istoric din Chișinău</h3>
+        </a>
       </div>
     </section>
     <section class="atractii_turistice" id="atractii_turistice"></section>
