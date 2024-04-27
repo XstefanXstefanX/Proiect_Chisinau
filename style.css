@@ -26,6 +26,7 @@ hr {
   box-sizing: border-box;
 }
 body {
+  overflow-x: hidden;
   background: var(--background);
   padding: 0 1rem;
 }
@@ -151,10 +152,8 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  color: var(--background);
+  color: black;
   font-weight: bold;
-  background: var(--accent);
-  opacity: 0.8;
 }
 .galerie-imagine:nth-child(1):hover::before {
   content: "Guvernul Republicii Moldova";
@@ -219,7 +218,7 @@ body {
 }
 @keyframes rotate {
   0% {
-    transform: translate(-50%, -50%) rotate(180deg);
+    transform: translate(-50%, -50%) rotate(0deg);
   }
   100% {
     transform: translate(-50%, -50%) rotate(360deg);
