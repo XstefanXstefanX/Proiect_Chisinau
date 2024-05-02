@@ -72,188 +72,30 @@
           padding: 1rem;
         }
       }
-      .acasa {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-      }
-      .chisinau-img {
-        margin-top: 150px;
-        background-image: url(https://s.inyourpocket.com/gallery/chisinau/2020/02/shutterstock-1226633425.jpg);
-        min-height: 600px;
-        background-attachment: fixed;
-        background-size: 150%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      .pisicaPeText {
-        transform: translate(20%, -80%);
-        color: white;
-        width: 50%;
-        font-size: 1.5rem;
-        font-weight: bold;
-        display: flex;
-        flex-direction: column;
-        > img {
-          z-index: 99;
-          width: 50%;
-          transform: translate(10%, 20%);
-        }
-        .descriere {
-          padding: 3rem;
-          border-radius: 10px;
-          background: var(--accent);
-        }
-      }
-      .despre_chisinau {
-        text-align: justify;
-        width: calc(100% + 2rem);
-        transform: translate(-1rem);
-        padding: calc(100% / 10) calc(100% / 5);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 4rem;
-        > div {
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-          > h1 {
-            align-self: center;
-            font-size: 2.5rem;
-            color: var(--text);
-          }
-        }
-      }
-      .galerie-container {
-        background: var(--primary);
-        width: calc(100% + 2rem);
-        transform: translate(-1rem);
-      }
-      .galerie {
-        gap: 1rem;
-        padding: calc(100% / 10);
-        list-style: none;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-      }
-      .galerie-imagine {
-        position: relative;
-        > img {
-          min-height: 100%;
-          object-fit: cover;
-          max-width: 100%;
-          border-radius: 10px;
-        }
-      }
-      .galerie-imagine:hover {
-        transform: scale(1.2);
-        transition: all 0.3s ease;
-        z-index: 10;
-      }
-      .galerie-imagine:hover::before {
-        content: "";
-        font-size: 150%;
+      .date-generale-tabel{
+        width: 100%;
+        padding: 1rem;
+        outline: 5px solid var(--text);
         text-align: center;
-        border-radius: 10px;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        color: black;
-        font-weight: bold;
       }
-      .galerie-imagine:nth-child(1):hover::before {
-        content: "Guvernul Republicii Moldova";
+      .date-generale-tabel tr:hover, .personalitati-tabel tr:hover {
+        background-color: var(--accent);
       }
-      .galerie-imagine:nth-child(2):hover::before {
-        content: "Catedrala Nașterea Domnului";
-      }
-      .galerie-imagine:nth-child(3):hover::before {
-        content: "Vinuri";
-      }
-      .galerie-imagine:nth-child(4):hover::before {
-        content: "Parcul Valea Morilor";
-      }
-      .galerie-imagine:nth-child(5):hover::before {
-        content: "Porțile Orașului";
-      }
-      .galerie-imagine:nth-child(6):hover::before {
-        content: "Catedrala Nașterea Domnului";
-      }
-      .galerie-imagine:nth-child(7):hover::before {
-        content: "Clădire frumoasă";
-      }
-      .galerie-imagine:nth-child(8):hover::before {
-        content: "Primărie";
-      }
-      .galerie-imagine:nth-child(9):hover::before {
-        content: "Ștefan cel Mare monument";
-      }
-      .atractions {
-        border: 1px;
-        width: calc(100%-2rem);
-        transform: translate(-1rem);
-        padding: 0 calc(100% / 10);
-        top: 250px;
-        position: absolute;
-      }
-      .atractions .locuri_de_vizitat {
-        list-style: none;
-        width: 100%;
-        color: var(--text);
-        display: grid;
-        gap: 5rem;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-        margin: 0;
-      }
-      .atractions .locuri_de_vizitat > li {
+      .personalitati, .date-generale{
+        margin-bottom: 5rem;
+        padding: 1rem;
+        height: 100vh;
         display: flex;
+        gap: 2rem;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        text-align: justify;
+      }
+      .personalitati-tabel{
         width: 100%;
-        height: 100%;
-      }
-      .atractions .locuri_de_vizitat > li > h1 {
-        color: var(--accent);
-        text-decoration: underline;
-      }
-      .video {
-        width: 100%;
-      }
-      #blocky {
-        position: absolute;
-        width: 400px;
-        height: 400px;
-        border-radius: 50%;
-        z-index: -1;
-        background: linear-gradient(to right, var(--secondary), var(--accent));
-        transform: translate(-50%, -50%);
-        animation: rotate 5s infinite linear;
-        filter: blur(100px);
-      }
-      @keyframes rotate {
-        0% {
-          transform: translate(-50%, -50%) rotate(0deg);
-        }
-        100% {
-          transform: translate(-50%, -50%) rotate(360deg);
-        }
-      }
-      .table {
-      }
-      .date-generale {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        text-align: center;
+        outline: 5px solid var(--text);
+        padding: 1rem;
       }
     </style>
   </head>
@@ -279,7 +121,8 @@
     </div>
     <!-- Continut pagina -->
     <section class="date-generale">
-      <table border="1" cellpadding="5" cellspacing="0">
+      <h1>Date Generale</h1>
+      <table class="date-generale-tabel" border=1 cellpadding="5" cellspacing="0">
         <tr>
           <th>Atribut</th>
           <th>Informație</th>
@@ -329,6 +172,155 @@
           <td>Arcul de Triumf, Catedrala Nașterea Domnului, Piața Centrală</td>
         </tr>
       </table>
+    </section>
+    <section class="personalitati">
+      <h1>Personalități din Chișinău</h1>
+      <table class="personalitati-tabel" border=1 cellpadding="5" cellspacing="0" >
+        <tr>
+          <th>Nume complet</th>
+          <th>Ani de viață</th>
+          <th>Domeniu de activitate</th>
+        </tr>
+        <tr>
+          <td>Alecu Russo</td>
+          <td>1819–1859</td>
+          <td>Scriitor, folclorist</td>
+        </tr>
+        <tr>
+          <td>George Karagheorghe</td>
+          <td>1827–1884</td>
+          <td>Descendentul conducătorului Serbiei Karagheorghe Petrovici</td>
+        </tr>
+        <tr>
+          <td>Alexei Șciusev</td>
+          <td>1873–1949</td>
+          <td>Arhitect</td>
+        </tr>
+        <tr>
+          <td>Lev Pisarjevski</td>
+          <td>1874–1938</td>
+          <td>Chimist și fizician-chimist</td>
+        </tr>
+        <tr>
+          <td>Nicolae Donici</td>
+          <td>1874–1960</td>
+          <td>Astronom</td>
+        </tr>
+        <tr>
+          <td>Paul Gore</td>
+          <td>1875–1927</td>
+          <td>Istoric și heraldist</td>
+        </tr>
+        <tr>
+          <td>Gavril Afanasiu</td>
+          <td>1879–1946</td>
+          <td>Bariton</td>
+        </tr>
+        <tr>
+          <td>Vladimir Albițki</td>
+          <td>1891–1952</td>
+          <td>Astronom</td>
+        </tr>
+        <tr>
+          <td>Piotr Galanza</td>
+          <td>1893–1982</td>
+          <td>Jurist și profesor universitar sovietic</td>
+        </tr>
+        <tr>
+          <td>Alexandru Naum Frumkin</td>
+          <td>1895–1976</td>
+          <td>Fizician, chimist</td>
+        </tr>
+        <tr>
+          <td>Lewis Milestone</td>
+          <td>1895–1980</td>
+          <td>Regizor, laureat al Premiului Oscar</td>
+        </tr>
+        <tr>
+          <td>Iona Iakir</td>
+          <td>1896–1937</td>
+          <td>Comandant al Armatei Roșii</td>
+        </tr>
+        <tr>
+          <td>Dimitrie Mangeron</td>
+          <td>1906–1991</td>
+          <td>Matematician și mecanic</td>
+        </tr>
+        <tr>
+          <td>Victor Nadolschi</td>
+          <td>1911–1996</td>
+          <td>Astronom</td>
+        </tr>
+        <tr>
+          <td>Miron Constantinescu</td>
+          <td>1917–1974</td>
+          <td>Om politic</td>
+        </tr>
+        <tr>
+          <td>Tatiana Nicolescu</td>
+          <td>Născută în 1923</td>
+          <td>Critic și istoric al literaturii, traducător</td>
+        </tr>
+        <tr>
+          <td>Lia Manoliu</td>
+          <td>1932–1998</td>
+          <td>Sportivă, campioană olimpică, președinte al Comitetului Olimpic Român</td>
+        </tr>
+        <tr>
+          <td>Andrei Andrieș</td>
+          <td>1933–2012</td>
+          <td>Fizician</td>
+        </tr>
+        <tr>
+          <td>Zwi Milshtein</td>
+          <td>1934–2020</td>
+          <td>Pictor franco-israelian</td>
+        </tr>
+        <tr>
+          <td>Dan Mândrilă</td>
+          <td>1938–1992</td>
+          <td>Saxofonist, conducător de formație și compozitor</td>
+        </tr>
+        <tr>
+          <td>Alexei Rudeanu</td>
+          <td>1939–2013</td>
+          <td>Prozator</td>
+        </tr>
+        <tr>
+          <td>Leonid Cijik</td>
+          <td>Născut în 1947</td>
+          <td>Pianist de jazz</td>
+        </tr>
+        <tr>
+          <td>Ion Arachelu</td>
+          <td>Născut în 1948</td>
+          <td>Actor</td>
+        </tr>
+        <tr>
+          <td>Sofia Clochișner</td>
+          <td>Născută în 1949</td>
+          <td>Fizician</td>
+        </tr>
+        <tr>
+          <td>Andrei Sârbu</td>
+          <td>1950–2000</td>
+          <td>Pictor</td>
+        </tr>
+        <tr>
+          <td>Raimonda Șeinfeld</td>
+          <td>Născută în 1951</td>
+          <td>Pianistă</td>
+        </tr>
+        <tr>
+          <td>Doina Aldea-Teodorovici</td>
+          <td>1958–1992</td>
+          <td>Cântăreață</td>
+        </tr>
+        <tr>
+          <td>Avigdor Lieberman</td>
+          <td>Născut în 1958</td>
+          <td>Politician israelian</td>
+        </tr>
     </section>
   </body>
 </html>
