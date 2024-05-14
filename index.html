@@ -246,8 +246,6 @@
           transform: translate(-50%, -50%) rotate(360deg);
         }
       }
-      .table {
-      }
       .date-generale {
         width: 100%;
         height: 100vh;
@@ -261,6 +259,21 @@
       .link:hover {
         opacity: 0.8;
         color: var(--text);
+      }
+      .footer {
+        padding: 4vw;
+        font-size: 2vw;
+        transform: translate(-1rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        color: var(--accent);
+        background: black;
+        > ul > li:hover {
+          text-decoration: underline;
+        }
       }
     </style>
   </head>
@@ -449,5 +462,23 @@
         </li>
       </ul>
     </section>
+    <footer class="footer">
+      <h1>Află mai multe</h1>
+      <ul>
+        <li>
+          <a href="https://ro.wikipedia.org/wiki/Chișinău"
+            >Wikipedia - Chișinău</a
+          >
+        </li>
+        <li>
+          <a href="https://www.chisinau.md/en">Pagina Oficială Chișinău</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/primariachisinaumd/?locale=ro_RO"
+            >Primăria Municipiul Chișinău</a
+          >
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>
