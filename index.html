@@ -226,23 +226,19 @@
         width: 100%;
       }
       #blocky {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5rem;
+        color: var(--background);
         position: absolute;
         width: 100px;
         height: 100px;
+        filter: blur(20px);
         border-radius: 50%;
         z-index: -1;
-        background: linear-gradient(to right, var(--secondary), var(--accent));
+        background: var(--secondary);
         transform: translate(-50%, -50%);
-        animation: rotate 5s infinite linear;
-        filter: blur(30px);
-      }
-      @keyframes rotate {
-        0% {
-          transform: translate(-50%, -50%) rotate(0deg);
-        }
-        100% {
-          transform: translate(-50%, -50%) rotate(360deg);
-        }
       }
       .date-generale {
         width: 100%;
@@ -288,7 +284,7 @@
                 left: `${clientX}px`,
                 top: `${clientY + pixelsScrolled}px`,
               },
-              { duration: 1000, fill: "forwards" }
+              { duration: 250, fill: "forwards" }
             );
           };
         });
